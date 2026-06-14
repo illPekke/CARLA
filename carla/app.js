@@ -5,41 +5,45 @@ const FECHA_INICIO = new Date('2026-06-14T00:00:00');
 const regalos = [
   {
     semana: 'Semana 1',
-    nombre: 'El anillo',
-    pista: 'Para llevarlo siempre contigo y recordar lo que tenemos.',
-    foto: 'assets/anillo.jpg'
+    nombre: 'Entradas para Quevedo',
+    pista: 'Porque la mejor música se disfruta en directo, juntos.',
+    foto: 'assets/entradas.jpeg'
   },
   {
     semana: 'Semana 2',
-    nombre: 'La pulsera',
-    pista: 'Una pulsera especial para ir llenando de recuerdos.',
-    foto: 'assets/pulsera.webp'
-  },
-  {
-    semana: 'Semana 3',
-    nombre: 'Charms para la pulsera',
-    pista: 'Pequeños detalles que la hacen única, como tú.',
-    foto: 'assets/trtuga.webp'
-  },
-  {
-    semana: 'Semana 4',
-    nombre: 'Camiseta de España',
-    pista: 'Para que sigas la Selección con estilo.',
-    foto: 'assets/españa.webp'
-  },
-  {
-    semana: 'Semana 5',
     nombre: 'Cuadro de Quevedo',
     pista: 'Una sorpresa del artista que más te gusta.',
     foto: 'assets/cuadro.jpeg'
   },
   {
+    semana: 'Semana 3',
+    nombre: 'Camiseta de España',
+    pista: 'Para que sigas la Selección con estilo.',
+    foto: 'assets/españa.webp'
+  },
+  {
+    semana: 'Semana 4',
+    nombre: 'La pulsera',
+    pista: 'Una pulsera especial para ir llenando de recuerdos.',
+    foto: 'assets/pulsera.webp'
+  },
+  {
+    semana: 'Semana 5',
+    nombre: 'Charms para la pulsera',
+    pista: 'Pequeños detalles que la hacen única, como tú.',
+    foto: 'assets/trtuga.webp'
+  },
+  {
     semana: 'Semana 6',
-    nombre: 'Entradas para Quevedo',
-    pista: 'Porque la mejor música se disfruta en directo, juntos.',
-    foto: 'assets/entradas.jpeg'
+    nombre: 'El anillo',
+    pista: 'Para llevarlo siempre contigo y recordar lo que tenemos.',
+    foto: 'assets/anillo.jpg'
   }
 ];
+
+
+
+
 
 // ── Lógica de fechas ────────────────────────────────────────────
 
