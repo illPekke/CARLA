@@ -1,0 +1,277 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --rosa-oscuro: #c4956a;
+  --crema: #fdf8f4;
+  --texto: #2c2020;
+  --texto-suave: #8a7a7a;
+  --borde: #e8d8d0;
+  --card-bg: #fff;
+  --lock-bg: #f9f4f1;
+}
+
+body {
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  padding: 0 0 4rem;
+}
+
+/* ── Header ── */
+
+header {
+  text-align: center;
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+.corazon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--rosa-oscuro);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: 400;
+  color: var(--texto);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--rosa-oscuro);
+}
+
+.subtitulo {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+}
+
+.separador {
+  width: 40px;
+  height: 1px;
+  background: var(--borde);
+  margin: 1.5rem auto;
+}
+
+/* ── Progreso ── */
+
+.progreso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--borde);
+  transition: background 0.4s ease;
+}
+
+.dot.activo {
+  background: var(--rosa-oscuro);
+}
+
+/* ── Contenedor ── */
+
+.contenedor {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ── Cards ── */
+
+.regalo-card {
+  background: var(--card-bg);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.4s ease;
+}
+
+.regalo-card.desbloqueado {
+  border-color: #d4b8a8;
+}
+
+.regalo-card.bloqueado {
+  background: var(--lock-bg);
+  opacity: 0.6;
+}
+
+.regalo-card.siguiente {
+  border-color: var(--rosa-oscuro);
+  opacity: 1;
+}
+
+.card-inner {
+  display: flex;
+}
+
+/* ── Foto ── */
+
+.foto-wrap {
+  width: 110px;
+  min-width: 110px;
+  height: 140px;
+  overflow: hidden;
+  background: var(--borde);
+  flex-shrink: 0;
+  border-radius: 16px 0 0 16px;
+  position: relative;
+}
+
+.foto-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.foto-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  color: #c8b4aa;
+}
+
+.foto-placeholder svg {
+  width: 26px;
+  height: 26px;
+  opacity: 0.5;
+}
+
+/* ── Contenido card ── */
+
+.card-contenido {
+  padding: 1rem 1rem 1rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 4px;
+}
+
+.semana-tag {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.tag-siguiente {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 9px;
+  background: #f5ede3;
+  color: #9a6a3e;
+  border-radius: 4px;
+  padding: 2px 6px;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+}
+
+.regalo-nombre {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--texto);
+  line-height: 1.3;
+}
+
+.regalo-pista {
+  font-size: 13px;
+  color: var(--texto-suave);
+  line-height: 1.55;
+}
+
+.icono-estado {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+.icono-estado svg {
+  width: 18px;
+  height: 18px;
+}
+
+.desenfocado {
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Contador ── */
+
+.contador-wrap {
+  margin-top: 8px;
+}
+
+.contador-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-bottom: 4px;
+}
+
+.contador-tiempo {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: var(--rosa-oscuro);
+  letter-spacing: 0.04em;
+}
+
+/* ── Mensaje final ── */
+
+.mensaje-final {
+  text-align: center;
+  padding: 1.5rem;
+  display: none;
+}
+
+.mensaje-final.visible {
+  display: block;
+}
+
+.mensaje-final p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--texto-suave);
+  line-height: 1.7;
+}
+
+/* ── Footer ── */
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 12px;
+  color: var(--borde);
+  letter-spacing: 0.1em;
+}
